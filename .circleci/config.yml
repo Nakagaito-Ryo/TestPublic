@@ -28,7 +28,9 @@ jobs:
       # アーティファクトをアップロードするステップ
       - run:
         name: Upload to Github Packages
-          command: mkdir -p ~/.m2
+          command:
+            |
+            mkdir -p ~/.m2
             echo "<settings><servers><server><id>github</id><username>${GITHUB_REPOSITORY_OWNER}</username><password>${TEST_TOKEN}</password></server></servers></settings>" > ~/.m2/settings.xml
             mvn deploy
           environment:
