@@ -7,24 +7,20 @@ jobs:
 
     steps:
       - checkout
-
       # Mavenのキャッシュを設定
       - restore_cache:
           keys:
             - maven-{{ checksum "pom.xml" }}
             - maven
-
       - run:
           name: Maven Build
           command: mvn -B -DskipTests=true package
-
       - save_cache:
           paths:
             - ~/.m2
           key: maven-{{ checksum "pom.xml" }}
           # キャッシュの有効期限を設定
           expires: 1d
-
       # アーティファクトをアップロードするステップ
       - run:
         name: Upload to Github Packages
