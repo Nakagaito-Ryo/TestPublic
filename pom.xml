@@ -61,8 +61,8 @@
 	<distributionManagement>
       <repository>
         <id>github</id>
-        <name>GitHub OWNER Apache Maven Packages</name>
-        <url>https://maven.pkg.github.com/Nakagaito-Ryo/TestPublic</url>
+        <name>GitHub nakagaito-ryo Apache Maven Packages</name>
+        <url>https://maven.pkg.github.com/nakagaito-ryo/TestPublic</url>
       </repository>
     </distributionManagement>
 
