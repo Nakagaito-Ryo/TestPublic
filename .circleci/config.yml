@@ -29,8 +29,8 @@ jobs:
       - run:
           name: Upload to Github Packages
           command: |
-            echo "//maven.pkg.github.com/${GITHUB_REPOSITORY_OWNER}:/oauth2Token=${GITHUB_PACKAGES_TOKEN}" > ~/.m2/settings.xml
+            echo "//maven.pkg.github.com/${GITHUB_REPOSITORY_OWNER}:/oauth2Token=${TEST_TOKEN}" > ~/.m2/settings.xml
             mvn deploy
           environment:
             GITHUB_REPOSITORY_OWNER: ${{ github.repository_owner }}
-            GITHUB_PACKAGES_TOKEN: ${{ secrets.GITHUB_PACKAGES_TOKEN }}
+            TEST_TOKEN: ${{ secrets.TEST_TOKEN }}
