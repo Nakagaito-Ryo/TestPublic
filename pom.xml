@@ -62,12 +62,12 @@
       <repository>
         <id>github</id>
         <name>GitHub Apache Maven Packages</name>
-        <url>https://maven.pkg.github.com/nakagaito-ryo/TestPublic</url>
+        <url>https://maven.pkg.github.com/nakagaito-ryo/testpublic</url>
       </repository>
 	  <snapshotRepository>
 		<id>github</id>
         <name>GitHub Apache Maven Packages</name>
-        <url>https://maven.pkg.github.com/nakagaito-ryo/TestPublic</url>
+        <url>https://maven.pkg.github.com/nakagaito-ryo/testpublic</url>
 	  </snapshotRepository>
     </distributionManagement>
 
