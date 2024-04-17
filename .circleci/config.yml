@@ -22,11 +22,11 @@ jobs:
           # キャッシュの有効期限を設定
           expires: 1d
       # アーティファクトをアップロードするステップ
-      # - run:
-      #   name: Upload to Github Packages
-      #     command: |
-      #       echo "<settings><servers><server><id>github</id><username>${GITHUB_REPOSITORY_OWNER}</username><password>${TEST_TOKEN}</password></server></servers></settings>" > ~/.m2/settings.xml
-      #       mvn deploy
-      #     environment:
-      #       GITHUB_REPOSITORY_OWNER: ${{ github.repository_owner }}
-      #       TEST_TOKEN: ${{ secrets.TEST_TOKEN }}
+      - run:
+        name: Upload to Github Packages
+          command: |
+            echo "<settings><servers><server><id>github</id><username>${GITHUB_REPOSITORY_OWNER}</username><password>${TEST_TOKEN}</password></server></servers></settings>" > ~/.m2/settings.xml
+            mvn deploy
+          environment:
+            GITHUB_REPOSITORY_OWNER: ${{ github.repository_owner }}
+            TEST_TOKEN: ${{ secrets.TEST_TOKEN }}
