@@ -29,12 +29,12 @@ jobs:
             echo "<servers>" >> ~/.m2/settings.xml
             echo "<server>" >> ~/.m2/settings.xml
             echo "<id>github</id>" >> ~/.m2/settings.xml
-            echo "<username>${GITHUB_REPOSITORY_OWNER}</username>" >> ~/.m2/settings.xml
+            echo "<username>nakagaito-ryo</username>" >> ~/.m2/settings.xml
             echo "<password>${TEST_TOKEN}</password>" >> ~/.m2/settings.xml
             echo "</server>" >> ~/.m2/settings.xml
             echo "</servers>" >> ~/.m2/settings.xml
             echo "</settings>" >> ~/.m2/settings.xml
             mvn deploy
           environment:
-            GITHUB_REPOSITORY_OWNER: ${{ github.repository_owner }}
-            TEST_TOKEN: ${{ secrets.TEST_TOKEN }}
+            #GITHUB_REPOSITORY_OWNER: ${{ github.repository_owner }}
+            TEST_TOKEN: ${{ TEST_TOKEN }}
